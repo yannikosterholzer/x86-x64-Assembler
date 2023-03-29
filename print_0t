@@ -1,8 +1,9 @@
-; print Funktion in x86-x64 Asm [Nasm] unter Linux
-; 
-; Zählt die Länge eines Nullterminierten Strings 
-; um diesen anschließend auszugeben
-
+; ------------------------------------------------------
+; print Funktion in x86-x64 Asm [Nasm] unter Linux     *
+;                                                      *
+; Zählt die Länge eines Nullterminierten Strings       *
+; um diesen anschließend auszugeben                    *
+; ------------------------------------------------------
 
 mov rax, string
 call _ausgabe
