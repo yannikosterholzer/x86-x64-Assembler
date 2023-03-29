@@ -6,9 +6,10 @@
 ; ------------------------------------------------------
 
 mov rax, string
-call _ausgabe
+call _print_nt
 
-_ausgabe:
+_print_nt:
+
  push rbp
  mov rbp, rsp
  sub rsp, 8
@@ -16,7 +17,7 @@ _ausgabe:
  mov rcx, 0              ; Counter
  mov bl, byte [rax]  
  cmp bl, 0               ; Teste auf 0
- je _End
+ je _End_print_nt
   
 _calclen:
  inc rax ; nächster charakter
@@ -30,7 +31,7 @@ _calclen:
  mov rdx, rcx            ; Länge des Strings
  syscall
 		
-_End:	
+_End_print_nt:	
   mov rsp, rbp
   pop rbp
   ret
