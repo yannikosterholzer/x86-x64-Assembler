@@ -1,0 +1,37 @@
+; print Funktion in x86-x64 Asm [Nasm] unter Linux
+; 
+; Zählt die Länge eines Nullterminierten Strings 
+; um diesen anschließend auszugeben
+
+
+mov rax, string
+call _ausgabe
+
+_ausgabe:
+	push rbp
+  mov rbp, rsp
+  sub rsp, 8
+  
+  mov qword[rbp-8], rax
+	mov rcx, 0              ; Counter
+	mov bl, byte [rax]  
+	cmp bl, 0               ; Teste auf 0
+	je _End
+  
+_calclen:
+	inc rax ; nächster charakter
+	inc rcx	; fuer Laenge
+	mov bl, byte [rax]  
+	cmp bl, 0 ; Teste auf 0
+	jne _calclen
+	
+	mov rax, 1  ; Sys_write
+	mov rdi, 1
+	mov rsi, qword [rbp-8]  ; Adresse des Strings
+	mov rdx, rcx            ; Länge des Strings
+	syscall
+		
+_End:	
+  mov rsp, rbp
+  pop rbp
+  ret
