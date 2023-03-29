@@ -5,7 +5,7 @@
 ; um diesen anschließend auszugeben                    *
 ; ------------------------------------------------------
 
-mov rax, string
+mov rdi, string
 call _print_nt
 
 _print_nt:
@@ -13,16 +13,16 @@ _print_nt:
  push rbp
  mov rbp, rsp
  sub rsp, 8
- mov qword[rbp-8], rax
+ mov qword[rbp-8], rdi
  mov rcx, 0              ; Counter
- mov bl, byte [rax]  
+ mov bl, byte [rdi]  
  cmp bl, 0               ; Teste auf 0
  je _End_print_nt
   
 _calclen:
- inc rax ; nächster charakter
+ inc rdi ; nächster charakter
  inc rcx	; fuer Laenge
- mov bl, byte [rax]  
+ mov bl, byte [rdi]  
  cmp bl, 0 ; Teste auf 0
  jne _calclen	
  mov rax, 1  ; Sys_write
