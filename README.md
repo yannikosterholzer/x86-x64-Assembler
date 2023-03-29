@@ -10,7 +10,7 @@ Alle Inhalte in diesem Repository wurden von mir erstellt. Verbesserungsvorschl�
 # Codes
 Hier finden Sie eine Übersicht der Codes und deren Kurzbeschreibung:
 
-  -**print_0t.asm**: Print-Funktion für nullterminierte Strings beliebiger Länge
+  -**print_nt.asm**: Print-Funktion für nullterminierte Strings beliebiger Länge
   
   -**parameter.asm**: Demonstriert Call by value & Call by reference in Assembler
   
