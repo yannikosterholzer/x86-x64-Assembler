@@ -26,7 +26,7 @@ main:
 test1:    												
  mov rdi, x							
  call byreference       ;	byreference(&x);
- mov rax, [rdi]
+ mov eax,dword [rdi]
  cmp rax, 0x19						  
  jne test2							
  mov rsi, msg1						
