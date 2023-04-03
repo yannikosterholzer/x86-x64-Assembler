@@ -20,7 +20,8 @@ _start:
 
 main:
  push rbp               ;	Stackframe der Main-Funktion initialisieren
- mov rbp, rsp					
+ mov rbp, rsp
+ sub rsp, 0x16
 
 ; Call by Reference
 test1:    												
@@ -30,9 +31,9 @@ test1:
  cmp rax, 0x19						  
  jne test2							
  mov rsi, msg1						
- mov rdx, len1						
- push rdx							
- push rsi							
+ mov rdx, len1
+ mov [rbp-8], rdx
+ mov [rbp-16], rsi
  call write							
 	 	
 ; Call by Value	
@@ -43,8 +44,8 @@ test2:
  jne end								  
  mov rsi, msg2							
  mov rdx, len2						
- push rdx							
- push rsi							
+ mov [rbp-8], rdx
+ mov [rbp-16], rsi
  call write							          
                 
 ; Ende der Mainfunktion                
