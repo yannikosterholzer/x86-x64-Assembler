@@ -15,6 +15,10 @@ Hier finden Sie eine Übersicht der Codes und deren Kurzbeschreibung:
   -**parameter.asm**: Demonstriert Call by value & Call by reference in Assembler
   
    ...
-  
+   
+# Weitere Codes werde ich in kürze auch hier hochladen
+# Hinweis: 
+In meinem ARMv7 Repository befindet sich u.a anderem eine in ARM realisierte chunk basierte dynamische Speicherverwaltung und zudem habe ich ein Repository mit 8086/8088 Code angelegt, der in der DOSbox bzw mit Emu8086 getestet werden kann. 
+
   
   
