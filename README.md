@@ -17,6 +17,7 @@ Hier finden Sie eine Übersicht der Codes und deren Kurzbeschreibung:
    ...
    
 # Weitere Codes werde ich in kürze auch hier hochladen
+Ich habe einige der Übungsaufgaben aus meinem Studium für Programmieren in C in Assembler programmiert und werde diese beizeiten hier posten
 # Hinweis: 
 In meinem ARMv7 Repository befindet sich u.a anderem eine in ARM realisierte chunk basierte dynamische Speicherverwaltung und zudem habe ich ein Repository mit 8086/8088 Code angelegt, der in der DOSbox bzw mit Emu8086 getestet werden kann. 
 
